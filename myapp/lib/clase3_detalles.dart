@@ -16,7 +16,7 @@ class DetallesPage extends StatelessWidget {
           children: [
             Text("$item Detalles"),
             RaisedButton(
-              child: Text("Volver"),
+              child: Text("Volver "),
               onPressed: () {
                 Navigator.pop(context);
               },

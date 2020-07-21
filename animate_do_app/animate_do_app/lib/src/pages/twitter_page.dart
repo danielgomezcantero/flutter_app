@@ -15,7 +15,7 @@ class _TwiterPageState extends State<TwiterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.pink,
+          backgroundColor: Colors.pink[400],
           child: FaIcon(FontAwesomeIcons.play),
           onPressed: () {
             setState(() {
@@ -28,8 +28,8 @@ class _TwiterPageState extends State<TwiterPage> {
             animate: activar,
             from: 30,
             duration: Duration(seconds: 1),
-            child: FaIcon(FontAwesomeIcons.twitter,
-                color: Colors.white, size: 50)),
+            child:
+                FaIcon(FontAwesomeIcons.robot, color: Colors.white, size: 50)),
       ),
     );
   }

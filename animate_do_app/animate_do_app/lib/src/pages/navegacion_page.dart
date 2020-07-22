@@ -2,8 +2,9 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
+import 'package:transparent_image/transparent_image.dart';
 
-class NavegacionPage extends StatelessWidget {
+class NavegationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -11,6 +12,16 @@ class NavegacionPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
             backgroundColor: Colors.pink, title: Text('Notifications Pages')),
+        body: Container(
+            alignment: Alignment.topCenter,
+            width: 100,
+            height: 100,
+            child: ElasticInDown(
+              child: Image.asset(
+                "assets/images/logoPalermo.png",
+                fit: BoxFit.contain,
+              ),
+            )),
         floatingActionButton: BotonFlotante(),
         bottomNavigationBar: BottomNavigation(),
       ),

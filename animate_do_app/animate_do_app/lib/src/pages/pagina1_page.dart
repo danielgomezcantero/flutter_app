@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:animate_do_app/src/pages/navegacion_page.dart';
 import 'package:animate_do_app/src/pages/twitter_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,8 +20,12 @@ class Pagina1Page extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                     context,
-                    CupertinoPageRoute(
+                    MaterialPageRoute(
                         builder: (BuildContext context) => TwiterPage()));
+                // Navigator.push(
+                //     context,
+                //     CupertinoPageRoute(
+                //         builder: (BuildContext context) => TwiterPage()));
               }),
           SlideInLeft(
             from: 100,
@@ -37,20 +42,21 @@ class Pagina1Page extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-          child: FaIcon(FontAwesomeIcons.play), onPressed: () {}),
+          child: FaIcon(FontAwesomeIcons.play),
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) => NavegationPage()));
+          }),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // new Image.asset(
-            //   '../assets/logoPalermo.png',
-            //   width: 10.0,
-            //   height: 10.0,
-            // ),
-            ElasticIn(
-                delay: Duration(milliseconds: 1100),
-                child:
-                    Icon(Icons.pie_chart, color: Colors.pinkAccent, size: 40)),
+            // ElasticIn(
+            //     delay: Duration(milliseconds: 1100),
+            //     child:
+            //         Icon(Icons.pie_chart, color: Colors.pinkAccent, size: 40)),
             FadeInDown(
               delay: Duration(milliseconds: 200),
               child: Text('Ventapp',
@@ -67,6 +73,18 @@ class Pagina1Page extends StatelessWidget {
                 width: 200,
                 height: 3,
                 color: Colors.teal,
+              ),
+            ),
+            ElasticIn(
+              //from: 50,
+              delay: Duration(milliseconds: 800),
+              child: Container(
+                width: 100,
+                height: 100,
+                child: Image.asset(
+                  "assets/images/logoPalermo.png",
+                  fit: BoxFit.contain,
+                ),
               ),
             )
           ],

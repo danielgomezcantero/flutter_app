@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/clase3.dart';
-import 'package:myapp/clase4.dart';
+import 'package:myapp/login/screens/login_screen.dart';
+import 'package:myapp/pruebas/clase3.dart';
+import 'package:myapp/pruebas/clase4.dart';
+import 'package:myapp/pruebas/imagenes.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +30,13 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: CounterPage(),
+      initialRoute: "/",
+
+      routes: {
+        "/": (context) => LoginScreen(),
+        "/imagen1": (context) => Imagen1(),
+      },
+      // home: LoginScreen(),
       // MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

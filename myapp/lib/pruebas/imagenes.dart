@@ -9,6 +9,10 @@ class Imagen1 extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blueAccent,
+        title: Text('Imagen local'),
+      ),
       body: Container(
         width: width,
         height: height,
@@ -17,6 +21,14 @@ class Imagen1 extends StatelessWidget {
           fit: BoxFit.contain,
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.account_balance_wallet),
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) => Imagen2()));
+          }),
     );
   }
 }
@@ -28,6 +40,10 @@ class Imagen2 extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.amber,
+        title: Text('Imagen en red'),
+      ),
       body: Container(
         width: width,
         height: height,
